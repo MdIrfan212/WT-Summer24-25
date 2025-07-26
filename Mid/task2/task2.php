@@ -45,7 +45,7 @@
       <tr>
         <td>Full Name:</td>
         <td><input type="text" placeholder="Enter Full Name"></td>
-      </tr>
+  </tr>
 
       <tr>
         <td>Date of Birth:</td>
@@ -138,7 +138,7 @@
 
  
     <div>
-      This is a demo text to show the overflow works in a small container with a lot of content...
+      This is a demo text to show the overflow works in a small container with 
     </div>
  
 </body>
