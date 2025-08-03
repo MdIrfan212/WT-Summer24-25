@@ -1,0 +1,25 @@
+h2, h3
+{
+color :red;
+text-align: left;
+
+}
+form
+{
+background-color: #ffffff;
+padding: 25px;
+max-width: 500px;
+margin : auto;
+
+}
+label{
+    display: back;
+    margin-top: 10px;
+    font-weight: bold;
+
+}
+input[type="checkbox"]
+{
+    margin-right: 5px;
+    margin-top: 10px;
+}
