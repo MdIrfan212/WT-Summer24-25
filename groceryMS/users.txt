@@ -7,3 +7,4 @@ Irfan|ifranhossain500@gmail.com|852963|customer|approved
 Suhaib Ahmed|suhaid999@gmail.com|000000|admin|pending
 Suhaib Ahmed|suhaid999@gmail.com|000000|admin
 himu|admin@grocery.com|admin123|admin
+Alice|alice@example.com|s3cr3t|admin

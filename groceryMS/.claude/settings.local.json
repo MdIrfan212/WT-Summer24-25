@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs -0 -n1 php -l)",
+      "Bash(cmd *)"
+    ]
+  }
+}
