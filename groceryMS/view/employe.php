@@ -26,7 +26,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $description = $conn->real_escape_string($_POST['description'] ?? '');
         $created_by  = $conn->real_escape_string($_SESSION['user'] ?? 'Employee');
 
-        $sql = "INSERT INTO products (name, category, price, stock) VALUES ('$name', '$category', $price, $stock)";
+        $stmt = $conn->prepare("INSERT INTO products (name, category, price, stock) VALUES (?, ?, ?, ?)");
+$stmt->bind_param('ssdi', $name, $category, $price, $stock);
+$stmt->execute();
+$sql = $stmt->error ? '' : '';
+
         if ($conn->query($sql) === true) {
             $notice = "Product added successfully.";
         } else {

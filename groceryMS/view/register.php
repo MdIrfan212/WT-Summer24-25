@@ -31,7 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     if (empty($errors)) {
-        $line = $name . '|' . $email . '|' . $pass . '|' . $role . PHP_EOL;
+        $hashed = password_hash($pass, PASSWORD_DEFAULT);
+        $line = $name . '|' . $email . '|' . $hashed . '|' . $role . PHP_EOL;
         $ok = file_put_contents($file, $line, FILE_APPEND | LOCK_EX);
         if ($ok === false) {
             $errors[] = "Could not save user. Check file permissions.";

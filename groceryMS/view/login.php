@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $uEmail = $parts[1] ?? '';
                 $uPass = $parts[2] ?? '';
                 $uRole = $parts[3] ?? '';
-                if ($email === $uEmail && $pass === $uPass) {
+                if ($email === $uEmail && password_verify($pass, $uPass)) {
                     $_SESSION['user'] = $name;
                     $_SESSION['role'] = $uRole;
                     header("Location: dashboard.php");
